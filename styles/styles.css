@@ -7,6 +7,7 @@
 
 :root {
   --color-primary: #191d2b;
+  --color-primary2:#141c2c;
   /* --color-secondary: #27AE60; */
   --color-secondary: crimson;
   --color-white: #FFFFFF;
@@ -31,7 +32,7 @@
 
 .light-mode {
   --color-primary: #FFFFFF;
-  --color-secondary: #F56692;
+  --color-secondary: #bf8065;
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -39,13 +40,53 @@
   --color-grey-2: #6c7983;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
-  --color-grey-5: #f8f8f8;
+  /* --color-grey-5: #f8f8f8; */
+  --color-grey-5: #bab3b3;
   --color-grey-6: #12181b;
 }
+* {
+  font-family: "Lexend", "Popins", "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  list-style: none;
+}
+
+html {
+  font-size: 90%;
+  overflow-x: hidden;
+  scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 1.2rem;
+  height: 0.25px;
+}
+html::-webkit-scrollbar-track {
+  /* background: transparent; */
+  background: inset 0 0 5px #a5aaad;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--crimson);
+  border-radius: 5rem;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--crimson);
+  cursor: pointer;
+}
+
+/* ::selection {
+  color: var(--color-grey-5);
+  background: var(--color-grey-4);
+} */
 
 body {
   background-color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 1.1rem;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
@@ -180,8 +221,8 @@ section {
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
-  height: 90%;
   width: 68%;
+  height: 80%;
   margin-left: 4rem;
   background-color: var(--color-black);
   transition: all 0.4s ease-in-out;
@@ -421,13 +462,14 @@ section {
 .portfolios .portfolio-item {
   flex: 1 1 280px;
   position: relative;
-  border-radius: 15px;
+  border-radius: .5rem;
 }
 .portfolios .portfolio-item img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: .5rem;
+
 }
 .portfolios .portfolio-item .hover-items {
   width: 100%;
@@ -436,7 +478,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 15px;
+  border-radius: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -607,7 +649,7 @@ section {
   margin: 1.5rem 0;
 }
 .contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
-  border-radius: 30px;
+  border-radius: .5rem;
   font-weight: inherit;
   font-size: inherit;
   font-family: inherit;
@@ -655,7 +697,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: .5rem
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
   padding: 1rem;
 }
 .main-btn::before {
