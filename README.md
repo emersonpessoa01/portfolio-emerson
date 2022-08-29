@@ -4,7 +4,7 @@
 
 ## Pré-visualização:
 
-[alura-plus-responsivo](https://emersonpessoa01.github.io/alura-plus-responsive/)
+[Portfólio-Emerson](https://emersonpessoa01.github.io/portfolio-emerson/)
 
 <div align="center"><img src="img/image-header.png" width=auto>
 </div>
