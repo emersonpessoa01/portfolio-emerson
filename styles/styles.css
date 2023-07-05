@@ -272,7 +272,7 @@ section {
 
 /* added box */
 .about-container .right-about .box{
-  flex: 1 1 20rem;
+  flex: 0 1 20rem;
   padding: 2rem;
   text-align: center;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
@@ -531,7 +531,7 @@ section {
   margin-top: 3rem;
 }
 .portfolios .portfolio-item {
-  flex: 1 1 280px;
+  flex: 0 1 280px;
   position: relative;
   border-radius: 0.5rem;
 }
