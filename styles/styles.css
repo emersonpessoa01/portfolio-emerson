@@ -262,8 +262,10 @@ section {
   padding-bottom: 5rem;
 }
 .about-container .right-about {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   max-width: 100%;
   align-items: center;
   justify-content: center;
@@ -272,7 +274,7 @@ section {
 
 /* added box */
 .about-container .right-about .box{
-  flex: 0 1 20rem;
+  /* flex: 1 1 20rem; */
   padding: 2rem;
   text-align: center;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
