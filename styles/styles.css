@@ -752,7 +752,7 @@ section {
 
 .main-btn {
   border-radius: 0.5rem;
-  color: inherit;
+  /* color: inherit; */
   font-weight: 600;
   position: relative;
   border: 1px solid var(--color-secondary);
@@ -760,6 +760,11 @@ section {
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
+  cursor: pointer;
+}
+.main-btn:hover{
+  /* background-color: var(--color-secondary); */
+  color:var(--color-grey-5);
 }
 .main-btn .btn-text {
   padding: 0 2rem;
