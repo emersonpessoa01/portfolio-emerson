@@ -470,6 +470,13 @@
                   </button>
                 </div>
               </form>
+              <!-- Modal -->
+              <div id="success-modal" class="modal hidden">
+                <div class="modal-content">
+                  <p id="modal-message">E-mail enviado com sucesso!</p>
+                  <button id="close-modal" class="close-btn">Fechar</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -504,22 +511,18 @@
     <!-- Swipper -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-      // Inicializar o EmailJS
       (function () {
         emailjs.init("uBZ5D2Qgs0aibNwE-"); // Substitua pelo seu User ID do EmailJS
       })();
 
-      // Selecionar o formulário e adicionar o evento de envio
       document.getElementById("contact-form").addEventListener("submit", function (e) {
-        e.preventDefault(); // Impedir o recarregamento da página
+        e.preventDefault();
 
-        // Obter os valores dos campos
         const userName = document.getElementById("user-name").value.trim();
         const userEmail = document.getElementById("user-email").value.trim();
         const userSubject = document.getElementById("user-subject").value.trim();
         const userMessage = document.getElementById("user-message").value.trim();
 
-        // Configurar os parâmetros do EmailJS
         const templateParams = {
           from_name: userName,
           from_email: userEmail,
@@ -529,19 +532,23 @@
           to_cc: "eps011108@gmail.com",
         };
 
-        // Enviar e-mail pelo EmailJS
         emailjs.send("service_gyw97at", "template_tcqonzo", templateParams).then(
-          function (response) {
-            alert("E-mail enviado com sucesso!"); // Mensagem de sucesso
-            console.log("Sucesso:", response.status, response.text);
+          function () {
+            // Exibir o modal de sucesso
+            const modal = document.getElementById("success-modal");
+            modal.classList.remove("hidden");
+
+            // Fechar o modal ao clicar no botão
+            document.getElementById("close-modal").addEventListener("click", function () {
+              modal.classList.add("hidden");
+            });
           },
           function (error) {
-            alert("Erro ao enviar o e-mail. Tente novamente."); // Mensagem de erro
+            alert("Erro ao enviar o e-mail. Tente novamente.");
             console.error("Erro:", error);
           }
         );
 
-        // Limpar o formulário
         document.getElementById("contact-form").reset();
       });
     </script>

@@ -827,6 +827,55 @@ section {
   text-align: justify;
 }
 
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none; /* Esconde o modal quando a classe 'hidden' está presente */
+}
+
+.modal-content {
+  background: #fff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+#modal-message {
+  font-size: 1.2rem;
+  color: #333; /* Cor do texto */
+  margin-bottom: 15px; /* Espaço entre o texto e o botão */
+}
+
+.close-btn {
+  background: #007bff; /* Azul */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+
+
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
