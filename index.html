@@ -454,14 +454,26 @@
             <div class="right-contact">
               <form id="contact-form" class="contact-form">
                 <div class="input-control i-c-2">
-                  <input autofocus type="text" id="user-name" required placeholder="NOME" />
-                  <input type="email" id="user-email" required placeholder="EMAIL" />
+                  <div class="input-field">
+                    <input autofocus type="text" id="user-name" placeholder="NOME" />
+                    <span class="error-message">O nome é obrigatório.</span>
+                  </div>
+                  <div class="input-field">
+                    <input type="email" id="user-email" placeholder="EMAIL" />
+                    <span class="error-message">O e-mail é obrigatório.</span>
+                  </div>
                 </div>
                 <div class="input-control">
-                  <input type="text" id="user-subject" required placeholder="ASSUNTO" />
+                  <div class="input-field">
+                    <input type="text" id="user-subject" placeholder="ASSUNTO" />
+                    <span class="error-message">O assunto é obrigatório.</span>
+                  </div>
                 </div>
                 <div class="input-control">
-                  <textarea id="user-message" cols="15" rows="8" placeholder="Mensagem Aqui..."></textarea>
+                  <div class="input-field">
+                    <textarea id="user-message" cols="15" rows="8" placeholder="Mensagem Aqui..."></textarea>
+                    <span class="error-message">A mensagem é obrigatória.</span>
+                  </div>
                 </div>
                 <div class="btn-con">
                   <button type="submit" class="main-btn">
@@ -470,6 +482,7 @@
                   </button>
                 </div>
               </form>
+
               <!-- Modal -->
               <div id="success-modal" class="modal hidden">
                 <div class="modal-content">
@@ -510,14 +523,67 @@
 
     <!-- Swipper -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- EmailJS e validação dos campos -->
     <script>
       (function () {
         emailjs.init("uBZ5D2Qgs0aibNwE-"); // Substitua pelo seu User ID do EmailJS
       })();
 
+      // Função para validação dos campos
+      function validarFormulario() {
+        let isValid = true;
+
+        // Selecionar os campos
+        const userName = document.getElementById("user-name");
+        const userEmail = document.getElementById("user-email");
+        const userSubject = document.getElementById("user-subject");
+        const userMessage = document.getElementById("user-message");
+
+        // Selecionar as mensagens de erro
+        const errorMessages = document.querySelectorAll(".error-message");
+        errorMessages.forEach((msg) => (msg.style.display = "none")); // Ocultar todas as mensagens
+
+        // Validar Nome
+        if (!userName.value.trim()) {
+          isValid = false;
+          userName.nextElementSibling.style.display = "block";
+        }
+
+        // Validar E-mail
+        if (!userEmail.value.trim()) {
+          isValid = false;
+          userEmail.nextElementSibling.textContent = "O e-mail é obrigatório.";
+          userEmail.nextElementSibling.style.display = "block";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail.value)) {
+          isValid = false;
+          userEmail.nextElementSibling.textContent = "O e-mail não é válido.";
+          userEmail.nextElementSibling.style.display = "block";
+        }
+
+        // Validar Assunto
+        if (!userSubject.value.trim()) {
+          isValid = false;
+          userSubject.nextElementSibling.style.display = "block";
+        }
+
+        // Validar Mensagem
+        if (!userMessage.value.trim()) {
+          isValid = false;
+          userMessage.nextElementSibling.style.display = "block";
+        }
+
+        return isValid;
+      }
+
+      // Evento de envio do formulário
       document.getElementById("contact-form").addEventListener("submit", function (e) {
         e.preventDefault();
 
+        if (!validarFormulario()) {
+          return; // Parar o envio se a validação falhar
+        }
+
+        // Obter valores dos campos
         const userName = document.getElementById("user-name").value.trim();
         const userEmail = document.getElementById("user-email").value.trim();
         const userSubject = document.getElementById("user-subject").value.trim();
@@ -534,11 +600,9 @@
 
         emailjs.send("service_gyw97at", "template_tcqonzo", templateParams).then(
           function () {
-            // Exibir o modal de sucesso
             const modal = document.getElementById("success-modal");
             modal.classList.remove("hidden");
 
-            // Fechar o modal ao clicar no botão
             document.getElementById("close-modal").addEventListener("click", function () {
               modal.classList.add("hidden");
             });
