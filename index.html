@@ -29,6 +29,11 @@
   </style>
   <body class="main-content">
     <header class="container header active" id="home">
+      <div class="video-bg-container">
+        <video autoplay muted loop id="bg-video">
+          <source src="./video/Prashanth Portfolio.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div class="header-content" id="particles01-js">
         <div class="left-header">
           <div class="h-shape"></div>
@@ -38,17 +43,20 @@
         </div>
         <div class="right-header">
           <h1 class="name">Olá, eu sou <span>Emerson Pessoa.</span></h1>
-          <span class="name">Front End.</span>
+          <span class="name">Full Stack.</span>
           <p>
             <strong>Fala, pessoal!</strong>
             ✅ Sou Desenvolvedor FullStack formado pelo bootcamp Web FullStack da XPE, com experiência prática destacada na área de Frontend.
           </p>
           <p>✅ Meu objetivo é aplicar meus conhecimentos técnicos e habilidades no desenvolvimento de soluções inovadoras e eficientes.</p>
           <p>
-            ✅ Recentemente, concluí minha formação em Desenvolvedor Full Stack Júnior pelo +PratTI, ministrado pela Codifica, e atualmente participo do bootcamp gratuito de 90 dias do Código de Base, focado na capacitação em Java.
+            ✅ Recentemente, concluí minha formação em Desenvolvedor Full Stack Júnior pelo +PratTI, ministrado pela Codifica, e atualmente participo
+            do bootcamp gratuito de 90 dias do Código de Base, focado na capacitação em Java.
           </p>
           <p>
-            ✅ Além disso, estou cursando o Programa de Capacitação e Residência TrendsIT, um treinamento voltado ao aperfeiçoamento do portfólio técnico e comportamental de profissionais que desejam ingressar ou se desenvolver no mercado de tecnologia da informação. Busco oportunidades para ingressar no mercado como Frontend Júnior ou Full Stack Júnior.
+            ✅ Além disso, estou cursando o Programa de Capacitação e Residência TrendsIT, um treinamento voltado ao aperfeiçoamento do portfólio
+            técnico e comportamental de profissionais que desejam ingressar ou se desenvolver no mercado de tecnologia da informação. Busco
+            oportunidades para ingressar no mercado como Frontend Júnior ou Full Stack Júnior.
           </p>
 
           <div class="btn-con" style="position: relative; z-index: 1">
@@ -618,84 +626,84 @@
       // Email JS
 
       //JS Code Here. C ole o Codigo JS do CodePen aqui
-      particlesJS("particles01-js", {
-        particles: {
-          number: { value: 95, density: { enable: true, value_area: 630 } },
-          color: { value: "#ffffff" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000000" },
-            polygon: { nb_sides: 5 },
-            image: { src: "img/github.svg", width: 100, height: 100 },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 6,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: { enable: false, rotateX: 600, rotateY: 1200 },
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            grab: { distance: 400, line_linked: { opacity: 1 } },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: { distance: 200, duration: 0.4 },
-            push: { particles_nb: 4 },
-            remove: { particles_nb: 2 },
-          },
-        },
-        retina_detect: true,
-      });
-      var count_particles, stats, update;
-      stats = new Stats();
-      stats.setMode(0);
-      stats.domElement.style.position = "absolute";
-      stats.domElement.style.left = "0px";
-      stats.domElement.style.top = "0px";
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector(".js-count-particles");
-      update = function () {
-        stats.begin();
-        stats.end();
-        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);
+      // particlesJS("particles01-js", {
+      //   particles: {
+      //     number: { value: 95, density: { enable: true, value_area: 630 } },
+      //     color: { value: "#ffffff" },
+      //     shape: {
+      //       type: "circle",
+      //       stroke: { width: 0, color: "#000000" },
+      //       polygon: { nb_sides: 5 },
+      //       image: { src: "img/github.svg", width: 100, height: 100 },
+      //     },
+      //     opacity: {
+      //       value: 0.5,
+      //       random: false,
+      //       anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+      //     },
+      //     size: {
+      //       value: 3,
+      //       random: true,
+      //       anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+      //     },
+      //     line_linked: {
+      //       enable: true,
+      //       distance: 150,
+      //       color: "#ffffff",
+      //       opacity: 0.4,
+      //       width: 1,
+      //     },
+      //     move: {
+      //       enable: true,
+      //       speed: 6,
+      //       direction: "none",
+      //       random: false,
+      //       straight: false,
+      //       out_mode: "out",
+      //       bounce: false,
+      //       attract: { enable: false, rotateX: 600, rotateY: 1200 },
+      //     },
+      //   },
+      //   interactivity: {
+      //     detect_on: "canvas",
+      //     events: {
+      //       onhover: { enable: true, mode: "repulse" },
+      //       onclick: { enable: true, mode: "push" },
+      //       resize: true,
+      //     },
+      //     modes: {
+      //       grab: { distance: 400, line_linked: { opacity: 1 } },
+      //       bubble: {
+      //         distance: 400,
+      //         size: 40,
+      //         duration: 2,
+      //         opacity: 8,
+      //         speed: 3,
+      //       },
+      //       repulse: { distance: 200, duration: 0.4 },
+      //       push: { particles_nb: 4 },
+      //       remove: { particles_nb: 2 },
+      //     },
+      //   },
+      //   retina_detect: true,
+      // });
+      // var count_particles, stats, update;
+      // stats = new Stats();
+      // stats.setMode(0);
+      // stats.domElement.style.position = "absolute";
+      // stats.domElement.style.left = "0px";
+      // stats.domElement.style.top = "0px";
+      // document.body.appendChild(stats.domElement);
+      // count_particles = document.querySelector(".js-count-particles");
+      // update = function () {
+      //   stats.begin();
+      //   stats.end();
+      //   if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      //   }
+      //   requestAnimationFrame(update);
+      // };
+      // requestAnimationFrame(update);
     </script>
   </body>
 </html>
