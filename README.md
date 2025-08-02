@@ -1,4 +1,4 @@
-1# Portfólio Responsivo
+# Portfólio Responsivo
 
  <p>Portfólio responsivo usando HTML, CSS e JavaScript. Possui um header lateral com links de início, Sobre mim, Meu portfólio e Contato.</p>
 
@@ -6,5 +6,6 @@
 
 [Portfólio-Emerson](https://portfolio-emerson.vercel.app/)
 
-<div align="center"><img src="./img/profile-reame02.png" width=auto>
+<div align="center"><img src="./img/profile-reame03
+.png" width=auto>
 </div>
