@@ -6,6 +6,5 @@
 
 [Portfólio-Emerson](https://portfolio-emerson.vercel.app/)
 
-<div align="center"><img src="./img/profile-reame03
-.png" width=auto>
+<div align="center"><img src="./img/profile-readme03.png" width=auto>
 </div>
