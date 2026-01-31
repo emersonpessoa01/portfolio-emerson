@@ -314,7 +314,6 @@ section {
 }
 .about-container .right-about .box img {
   height: 7rem;
-
 }
 .about-container .right-about .box h3 {
   color: #fff;
@@ -389,15 +388,31 @@ section {
   height: 12rem;
   object-fit: cover;
 }
+.about-container .right-about .abt-text .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.about-container .right-about .abt-text .skills-list span {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 1px 8px 0;
+}
 
 .about-container .right-about .about-item .abt-text .small-text {
   padding-left: 3rem;
   position: relative;
-  /* text-transform: uppercase; */
   font-size: 1.2rem;
   color: var(--color-grey-1);
   letter-spacing: 2px;
 }
+
 .about-container .right-about .about-item .abt-text .small-text::before {
   content: "";
   position: absolute;
