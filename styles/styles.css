@@ -286,7 +286,7 @@ section {
 /*About*/
 .about-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
@@ -378,7 +378,7 @@ section {
 } */
 .about-container .right-about .abt-text .large-text {
   /* font-size: 3rem; */
-  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 700;
   color: var(--color-secondary);
   padding-block: 1rem;
@@ -1070,6 +1070,10 @@ section {
   }
   .main-title h2 .bg-text {
     font-size: 2.3rem;
+  }
+  .contact-content-con .left-contact .contact-info .contact-item{
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media screen and (max-width: 1432px) {
