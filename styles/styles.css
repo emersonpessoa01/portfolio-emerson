@@ -55,12 +55,12 @@ html {
   scroll-behavior: smooth;
 }
 html::-webkit-scrollbar {
-  width: 1.2rem;
-  height: 0.25px;
+  width: 0.8rem;
+  height: 4px;
 }
 html::-webkit-scrollbar-track {
-  /* background: transparent; */
-  background: inset 0 0 5px #a5aaad;
+  background: var(--color-grey0);
+  box-shadow: inset 0 0 5px #a5aaad;
 }
 html::-webkit-scrollbar-thumb {
   background: var(--crimson);
@@ -1070,7 +1070,7 @@ section {
   .main-title h2 .bg-text {
     font-size: 2.3rem;
   }
-  .contact-content-con .left-contact .contact-info .contact-item{
+  .contact-content-con .left-contact .contact-info .contact-item {
     flex-direction: column;
     align-items: flex-start;
   }
