@@ -362,7 +362,7 @@ section {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   border-radius: 0.5rem;
-  min-height: 260px;
+  min-height: 300px;
 }
 .about-container .right-about .abt-text:hover {
   cursor: default;
@@ -378,7 +378,7 @@ section {
 } */
 .about-container .right-about .abt-text .large-text {
   /* font-size: 3rem; */
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 2.1vw, 3rem);
   font-weight: 700;
   color: var(--color-secondary);
   padding-block: 1rem;
