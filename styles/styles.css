@@ -376,9 +376,9 @@ section {
   font-weight: 700;
   color: var(--color-secondary);
 } */
-.about-container .right-about .abt-text .large-text {
+body main section.container .about-container .right-about .about-item .abt-text p.large-text {
   /* font-size: 3rem; */
-  font-size: clamp(1rem, 2.1vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--color-secondary);
   padding-block: 1rem;
