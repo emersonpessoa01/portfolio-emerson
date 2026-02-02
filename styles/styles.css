@@ -316,9 +316,9 @@ section {
   height: 7rem;
 }
 .about-container .right-about .box h3 {
-  color: #fff;
+  color: var(--color-secondary);
   font-size: 1.7rem;
-  font-weight: normal;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .about-container .right-about .box:hover {
@@ -383,6 +383,7 @@ body main section.container .about-container .right-about .about-item .abt-text 
   color: var(--color-secondary);
   padding-block: 1rem;
 }
+
 .about-container .right-about .about-item .abt-text img {
   width: 100%;
   height: 12rem;
