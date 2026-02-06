@@ -378,7 +378,7 @@ section {
 } */
 body main section.container .about-container .right-about .about-item .abt-text p.large-text {
   /* font-size: 3rem; */
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--color-secondary);
   padding-block: 1rem;
@@ -1225,3 +1225,4 @@ body main section.container .about-container .right-about .about-item .abt-text 
 }
 
 /*# sourceMappingURL=styles.css.map */
+
