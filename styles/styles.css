@@ -1224,5 +1224,12 @@ body main section.container .about-container .right-about .about-item .abt-text 
   }
 }
 
+@media(max-width:320px){
+  .about-container .right-about .box h3{
+    font-size: 1.5rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
+
 
